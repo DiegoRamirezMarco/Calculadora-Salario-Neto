@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CalculadoraNeto</string>
+    <string name="numero1">Numero1</string>
+    <string name="numero2">Numero1</string>
+    <string-array name="grupoProfesionalArray">
+        <item>Grupo A</item>
+        <item>Grupo B</item>
+        <item>Grupo C</item>
+    </string-array>
+    <string-array name="estadoCivil">
+        <item>Soltero</item>
+        <item>Casado</item>
+        <item>Divorciado</item>
+        <item>Viudo</item>
+    </string-array>
+</resources>

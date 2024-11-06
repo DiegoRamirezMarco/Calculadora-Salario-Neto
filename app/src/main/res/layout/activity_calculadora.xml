@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculadoraActivity">
+
+    <View
+        android:id="@+id/fondo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/marco"
+        android:layout_width="320dp"
+        android:layout_height="550dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/fondo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/purple_200"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewSalario"
+        android:background="@color/black"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
+        android:gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:text="Salario bruto anual"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/marco"
+        app:layout_constraintTop_toTopOf="@+id/marco"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextSalario"
+        android:layout_marginHorizontal="5dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="@+id/marco"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSalario"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewPagas"
+        android:background="@color/black"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
+        android:gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:text="Numero de pagas"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/marco"
+        app:layout_constraintTop_toTopOf="@+id/marco"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextPagas"
+        android:layout_marginHorizontal="5dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/marco"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPagas"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewEdad"
+        android:background="@color/black"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
+        android:gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:text="Edad"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/marco"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSalario"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextEdad"
+        android:layout_marginHorizontal="5dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="@+id/marco"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEdad"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewGrupo"
+        android:background="@color/black"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
+        android:gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:text="Grupo profesional"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/marco"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPagas"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerGrupo"
+        android:layout_marginHorizontal="5dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/marco"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGrupo"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewDiscapacidad"
+        android:background="@color/black"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
+        android:gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:text="Grado de Discapacidad"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/marco"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEdad"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextDiscapacidad"
+        android:layout_marginHorizontal="5dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="@+id/marco"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDiscapacidad"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewEstado"
+        android:background="@color/black"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
+        android:gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:text="Estado Civil"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/marco"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerGrupo"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerEstado"
+        android:layout_marginHorizontal="5dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/marco"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEstado"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewHijos"
+        android:background="@color/black"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
+        android:gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:text="Hijos"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/marco"
+        app:layout_constraintStart_toStartOf="@+id/marco"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDiscapacidad"
+        tools:ignore="MissingConstraints" />
+
+
+    <EditText
+        android:id="@+id/editTextHijos"
+        android:layout_marginHorizontal="5dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/marco"
+        app:layout_constraintStart_toStartOf="@+id/marco"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHijos"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="500dp"
+        android:text="Calcular"
+        app:layout_constraintBottom_toBottomOf="@+id/marco"
+        app:layout_constraintEnd_toEndOf="@+id/marco"
+        app:layout_constraintStart_toStartOf="@+id/marco"
+        app:layout_constraintTop_toBottomOf="@+id/editTextHijos" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
