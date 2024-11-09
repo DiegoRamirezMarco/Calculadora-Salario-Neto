@@ -5,51 +5,238 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".ResultadoActivity">
 
     <View
         android:id="@+id/view2"
         android:layout_width="wrap_content"
         android:layout_height="100sp"
-        android:background="@color/black"
+        android:background="@color/texto"
         tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/view3"
         android:layout_width="wrap_content"
         android:layout_height="100sp"
-        android:background="@color/black"
+        android:background="@color/texto"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/resultado"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="150sp"
-        tools:text="Texto de prueba"
-        android:textSize="50dp"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:layout_marginHorizontal="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        app:cardBackgroundColor="@color/cartas"
+        app:cardCornerRadius="17dp"
         app:layout_constraintBottom_toTopOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2"
-        android:background="@color/black"
-        android:textColor="@color/white"/>
+        app:layout_constraintTop_toBottomOf="@+id/view2">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="15dp">
+            <TextView
+                android:id="@+id/resultadoSalarioBruto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:textAlignment="center"
+                android:textColor="@color/texto"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                tools:text="Salario Bruto: 25000" />
+
+            <TextView
+                android:id="@+id/resultadoPagas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:textAlignment="center"
+                android:textColor="@color/texto"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                tools:text="Pagas: 25000" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/boton"
+                />
+            <TextView
+                android:id="@+id/DEDUCCIONES"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:textAlignment="center"
+                android:textColor="@color/texto"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                android:text="DEDUCCIONES"
+                android:textStyle="bold"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/boton"
+                android:layout_marginHorizontal="25dp"
+                />
+            <TextView
+                android:id="@+id/resultadoirpf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/texto"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                tools:text="IRPF: 25000" />
+            <TextView
+                android:id="@+id/resultadoEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/texto"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                tools:text="Edad: 25000" />
+
+            <TextView
+                android:id="@+id/resultadoGrupoProfesional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/texto"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                tools:text="Grupo Profesional: 25000" />
+
+            <TextView
+                android:id="@+id/resultadoEstadoCivil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/texto"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                tools:text="Estado Civil: 25000" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/boton"
+                android:layout_marginHorizontal="25dp"
+                />
+            <TextView
+                android:id="@+id/BONIFICACIONES"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:textAlignment="center"
+                android:textColor="@color/texto"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                android:text="BONIFICACIONES"
+                android:textStyle="bold"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/boton"
+                android:layout_marginHorizontal="25dp"
+                />
+            <TextView
+                android:id="@+id/resultadoHijos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/texto"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                tools:text="Hijos: 25000" />
+
+            <TextView
+                android:id="@+id/resultadoDiscapacidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/texto"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                tools:text="Discapacidad: 25000" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/boton"
+                />
+            <TextView
+                android:id="@+id/resultadoSalarioTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="12dp"
+                android:textAlignment="center"
+                android:textColor="@color/texto"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                tools:text="25000 SalarioNeto" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
     <Button
         android:id="@+id/btnRegreso"
         android:layout_width="250sp"
         android:layout_height="50sp"
         android:text="Volver a Calcular"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultado" />
+        app:layout_constraintStart_toStartOf="parent"/>
+<!--
 
 
+-->
 
 
 

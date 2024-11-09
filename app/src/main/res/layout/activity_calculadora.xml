@@ -5,213 +5,360 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".CalculadoraActivity">
 
-    <View
-        android:id="@+id/fondo"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/black"
-        tools:ignore="MissingConstraints" />
-
-    <View
-        android:id="@+id/marco"
-        android:layout_width="320dp"
-        android:layout_height="550dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/fondo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/purple_200"
+        android:background="@color/texto"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textViewSalario"
-        android:background="@color/black"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginVertical="5dp"
-        android:gravity="center"
-        android:layout_width="150dp"
-        android:layout_height="20dp"
-        android:text="Salario bruto anual"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="@+id/marco"
-        app:layout_constraintTop_toTopOf="@+id/marco"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/editTextSalario"
-        android:layout_marginHorizontal="5dp"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toStartOf="@+id/marco"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSalario"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textViewPagas"
-        android:background="@color/black"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginVertical="5dp"
-        android:gravity="center"
-        android:layout_width="150dp"
-        android:layout_height="20dp"
-        android:text="Numero de pagas"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/marco"
-        app:layout_constraintTop_toTopOf="@+id/marco"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/editTextPagas"
-        android:layout_marginHorizontal="5dp"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="@+id/marco"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPagas"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textViewEdad"
-        android:background="@color/black"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginVertical="5dp"
-        android:gravity="center"
-        android:layout_width="150dp"
-        android:layout_height="20dp"
-        android:text="Edad"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="@+id/marco"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSalario"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/editTextEdad"
-        android:layout_marginHorizontal="5dp"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toStartOf="@+id/marco"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEdad"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textViewGrupo"
-        android:background="@color/black"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginVertical="5dp"
-        android:gravity="center"
-        android:layout_width="150dp"
-        android:layout_height="20dp"
-        android:text="Grupo profesional"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/marco"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPagas"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinnerGrupo"
-        android:layout_marginHorizontal="5dp"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="@+id/marco"
-        app:layout_constraintTop_toBottomOf="@+id/textViewGrupo"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textViewDiscapacidad"
-        android:background="@color/black"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginVertical="5dp"
-        android:gravity="center"
-        android:layout_width="150dp"
-        android:layout_height="20dp"
-        android:text="Grado de Discapacidad"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="@+id/marco"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEdad"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/editTextDiscapacidad"
-        android:layout_marginHorizontal="5dp"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toStartOf="@+id/marco"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDiscapacidad"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textViewEstado"
-        android:background="@color/black"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginVertical="5dp"
-        android:gravity="center"
-        android:layout_width="150dp"
-        android:layout_height="20dp"
-        android:text="Estado Civil"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/marco"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerGrupo"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinnerEstado"
-        android:layout_marginHorizontal="5dp"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="@+id/marco"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEstado"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textViewHijos"
-        android:background="@color/black"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginVertical="5dp"
-        android:gravity="center"
-        android:layout_width="150dp"
-        android:layout_height="20dp"
-        android:text="Hijos"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/marco"
-        app:layout_constraintStart_toStartOf="@+id/marco"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDiscapacidad"
-        tools:ignore="MissingConstraints" />
+    <!--Tajeta Salario Bruto Anual-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCartaSalarioB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="17dp"
+        app:cardCornerRadius="17dp"
+        app:cardBackgroundColor="@color/cartas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
 
 
-    <EditText
-        android:id="@+id/editTextHijos"
-        android:layout_marginHorizontal="5dp"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="@+id/marco"
-        app:layout_constraintStart_toStartOf="@+id/marco"
-        app:layout_constraintTop_toBottomOf="@+id/textViewHijos"
-        tools:ignore="MissingConstraints" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
 
-    <Button
+            <TextView
+                android:id="@+id/textViewSalario"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/texto"
+                android:gravity="center"
+                android:text="Salario bruto anual"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/marco"
+                app:layout_constraintTop_toTopOf="@+id/marco"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/editTextSalario"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="5dp"
+                app:layout_constraintStart_toStartOf="@+id/marco"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSalario"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <!--Tajeta Numero de Pagas-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCartaPagas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="17dp"
+
+        app:cardBackgroundColor="@color/cartas"
+        app:cardCornerRadius="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cvCartaSalarioB"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewPagas"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="5dp"
+                android:gravity="center"
+                android:text="Numero de pagas"
+                android:textStyle="bold"
+                android:textColor="@color/texto"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/marco"
+                app:layout_constraintTop_toTopOf="@+id/marco"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/editTextPagas"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/marco"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPagas"
+                tools:ignore="MissingConstraints" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <!--Tajeta Edad-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCartaEdad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="17dp"
+
+        app:cardCornerRadius="17dp"
+        app:cardBackgroundColor="@color/cartas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvCartaSalarioB">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/textViewEdad"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="5dp"
+                android:gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:text="Edad"
+                android:textStyle="bold"
+                android:textColor="@color/texto"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/marco"
+                app:layout_constraintTop_toBottomOf="@+id/editTextSalario"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/editTextEdad"
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toStartOf="@+id/marco"
+                app:layout_constraintTop_toBottomOf="@+id/textViewEdad"
+                tools:ignore="MissingConstraints" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <!--Tajeta Grupo-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCartaGrupoP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="17dp"
+
+        app:cardBackgroundColor="@color/cartas"
+        app:cardCornerRadius="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cvCartaEdad"
+        app:layout_constraintTop_toBottomOf="@+id/cvCartaSalarioB">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textViewGrupo"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="5dp"
+                android:gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:text="Grupo profesional"
+                android:textStyle="bold"
+                android:textColor="@color/texto"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/marco"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPagas"
+                tools:ignore="MissingConstraints" />
+
+            <Spinner
+                android:id="@+id/spinnerGrupo"
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="@+id/marco"
+                app:layout_constraintTop_toBottomOf="@+id/textViewGrupo"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <!--Tajeta Discapacidad-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDiscapacidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="17dp"
+
+        app:cardCornerRadius="17dp"
+        app:cardBackgroundColor="@color/cartas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvCartaEdad">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/textViewDiscapacidad"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="5dp"
+                android:gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:text="Grado de Discapacidad"
+                android:textStyle="bold"
+                android:textColor="@color/texto"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/marco"
+                app:layout_constraintTop_toBottomOf="@+id/editTextEdad"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/editTextDiscapacidad"
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toStartOf="@+id/marco"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDiscapacidad"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <!--Tajeta Estado-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCartaEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="17dp"
+        app:cardBackgroundColor="@color/cartas"
+        app:cardCornerRadius="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cvDiscapacidad"
+        app:layout_constraintTop_toBottomOf="@+id/cvCartaEdad">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewEstado"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="5dp"
+                android:gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:text="Estado Civil"
+                android:textStyle="bold"
+                android:textColor="@color/texto"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/marco"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerGrupo"
+                tools:ignore="MissingConstraints" />
+
+            <Spinner
+                android:id="@+id/spinnerEstado"
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="@+id/marco"
+                app:layout_constraintTop_toBottomOf="@+id/textViewEstado"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <!--Tajeta Hijos-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCartaHijos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/cartas"
+        android:layout_marginTop="17dp"
+
+        app:cardCornerRadius="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvDiscapacidad">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewHijos"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="5dp"
+                android:gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:text="Hijos"
+                android:textStyle="bold"
+                android:textColor="@color/texto"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/marco"
+                app:layout_constraintStart_toStartOf="@+id/marco"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDiscapacidad"
+                tools:ignore="MissingConstraints" />
+
+
+            <EditText
+                android:id="@+id/editTextHijos"
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="@+id/marco"
+                app:layout_constraintStart_toStartOf="@+id/marco"
+                app:layout_constraintTop_toBottomOf="@+id/textViewHijos"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <!--Boton Calcular-->
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCalcular"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:layout_marginVertical="500dp"
+        android:background="@color/boton"
         android:text="Calcular"
-        app:layout_constraintBottom_toBottomOf="@+id/marco"
-        app:layout_constraintEnd_toEndOf="@+id/marco"
-        app:layout_constraintStart_toStartOf="@+id/marco"
-        app:layout_constraintTop_toBottomOf="@+id/editTextHijos" />
+        android:textColor="@color/texto"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvCartaHijos" />
 
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/texto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
