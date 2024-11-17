@@ -17,6 +17,7 @@ class ResultadoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_resultado)
+        //Inicializo los Text View
         val calculo = findViewById<TextView>(R.id.resultadoSalarioTotal)
         val resultadoSalarioBruto = findViewById<TextView>(R.id.resultadoSalarioBruto)
         val resultadoPagas = findViewById<TextView>(R.id.resultadoPagas)
@@ -27,6 +28,7 @@ class ResultadoActivity : AppCompatActivity() {
         val resultadoDiscapacidad = findViewById<TextView>(R.id.resultadoDiscapacidad)
         val resultadoirpf = findViewById<TextView>(R.id.resultadoirpf)
 
+        //Se muestran los valores
         val salarioNeto : Double = intent.extras?.getDouble("EXTRA_SALARIO_NETO") ?: 0.0
         calculo.text = "Salario Neto = $salarioNeto €"
         val salarioBruto : Double = intent.extras?.getDouble("EXTRA_SALARIO_BRUTO") ?: 0.0
@@ -46,6 +48,7 @@ class ResultadoActivity : AppCompatActivity() {
         val discapacidad : Double = intent.extras?.getDouble("EXTRA_DEDUCCION_DISCAPACIDAD") ?: 0.0
         resultadoDiscapacidad.text = "Discapacidad = $discapacidad €"
 
+        //Inicializo y se configura el boton para regresar
         val btnRegreso = findViewById<Button>(R.id.btnRegreso)
         btnRegreso.setOnClickListener {
             val intentRegreso = Intent(this , CalculadoraActivity::class.java)

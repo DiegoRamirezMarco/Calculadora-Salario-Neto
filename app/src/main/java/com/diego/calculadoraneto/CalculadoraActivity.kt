@@ -20,7 +20,7 @@ class CalculadoraActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_calculadora)
 
-        //Inicializo los EditText
+        //Inicializo los EditText y los dos Spinner que hay con sus respectivos array
         val editTextSalario = findViewById<EditText>(R.id.editTextSalario)
         val editTextPagas = findViewById<EditText>(R.id.editTextPagas)
         val editTextEdad = findViewById<EditText>(R.id.editTextEdad)
@@ -39,7 +39,7 @@ class CalculadoraActivity : AppCompatActivity() {
 
         val editTextHijos = findViewById<EditText>(R.id.editTextHijos)
 
-        //Inicializo el Boton
+        //Inicializo el Boton para calcular
         val btnCalcular = findViewById<Button>(R.id.btnCalcular)
         btnCalcular.setOnClickListener {
             //Recogemos los datos de cada uno de los EditText de arriba y los pasamos a su valor logico
@@ -64,7 +64,7 @@ class CalculadoraActivity : AppCompatActivity() {
             val salarioNeto = redondear(calcularSalarioNeto(salarioBruto, irpf, ajusteEdad, bonificacionHijos, bonificacionDiscapacidad, retencionGrupo, ajusteEstado))
 
             Log.i("bonton","$salarioNeto , $salarioPagas")
-            //-------------------------------------------------------------------
+            //Añado valores para poder usarlos en otra activity
             val inten = Intent(this, ResultadoActivity::class.java)
             inten.putExtra("EXTRA_SALARIO_NETO", salarioNeto)
             inten.putExtra("EXTRA_SALARIO_BRUTO", salarioBruto)
@@ -76,10 +76,9 @@ class CalculadoraActivity : AppCompatActivity() {
             inten.putExtra("EXTRA_RETENCION_GRUPO", retencionGrupo)
             inten.putExtra("EXTRA_ESTADO_CIVIL", ajusteEstado)
             startActivity(inten)
-
         }
     }
-
+    //Hago las funciones para hacer los calculos.
     private fun redondear(valor: Double): Double {
         return String.format("%.2f", valor).toDouble()
     }
